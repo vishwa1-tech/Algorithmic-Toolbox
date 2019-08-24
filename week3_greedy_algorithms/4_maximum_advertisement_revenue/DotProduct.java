@@ -4,8 +4,10 @@ public class DotProduct {
     private static long maxDotProduct(int[] a, int[] b) {
         //write your code here
         long result = 0;
-        for (int i = 0; i < a.length; i++) {
-            result += a[i] * b[i];
+        Arrays.sort(a);
+        Arrays.sort(b);
+        for (int i = a.length-1; i >= 0; i--) {
+            result += (long)a[i] * b[i];
         }
         return result;
     }
