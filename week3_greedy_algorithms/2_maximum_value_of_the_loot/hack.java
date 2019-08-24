@@ -47,7 +47,7 @@ public class hack {
 
             // To sort in descending order revert
             // the '>' Operator
-            if (entry1[col]/entry1[col+1] < entry2[col]/entry2[col+1])
+            if ((double)entry1[col]/entry1[col+1] < (double)entry2[col]/entry2[col+1])
                 return 1;
             else
                 return -1;
