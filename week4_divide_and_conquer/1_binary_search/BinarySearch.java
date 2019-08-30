@@ -1,10 +1,22 @@
 import java.io.*;
 import java.util.*;
 
-public class BinarySearch {
+public class diagonal  {
 
     static int binarySearch(int[] a, int x) {
-        int left = 0, right = a.length;
+        int left = 0, right = a.length-1;
+        int mid;
+        while(left<=right) {
+            mid = left + ((right - left) / 2);
+            if (a[mid] == x) {
+                return mid;
+            }
+            if (a[mid] > x) {
+                right = mid - 1;
+            } else if (a[mid] < x) {
+                left = mid + 1;
+            }
+        }
         //write your code here
 
         return -1;
@@ -27,11 +39,11 @@ public class BinarySearch {
         int m = scanner.nextInt();
         int[] b = new int[m];
         for (int i = 0; i < m; i++) {
-          b[i] = scanner.nextInt();
+            b[i] = scanner.nextInt();
         }
         for (int i = 0; i < m; i++) {
             //replace with the call to binarySearch when implemented
-            System.out.print(linearSearch(a, b[i]) + " ");
+            System.out.print(binarySearch(a, b[i]) + " ");
         }
     }
     static class FastScanner {
