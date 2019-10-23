@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*;//including util package
 
 public class Knapsack {
     static int optimalWeight(int W, int[] w) {
