@@ -9,7 +9,7 @@ public class Change {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int m = scanner.nextInt();
-        System.out.println(getChange(m));
+        System.out.print(getChange(m));
 
     }
 }
